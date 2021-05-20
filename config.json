@@ -1,0 +1,156 @@
+{
+	"GENERAL" : {
+	  	"DISCORD_TOKEN" : "",
+	  	"PREFIX" : "t!",
+	  	"version" : "2.4.6",
+	  	"langlist" : ["en", "fr"]
+  	},
+  	"ERRORS" : {
+  		"errorplayer" : {
+		"en" : "Ultimate Tic Tac Toe is a game for 2 players! I hope you have at least one friend to play with you. :upside_down:",
+		"fr" : "Le Metamorpion se joue \u00e0 2 ! J'esp\u00e8re que tu as au moins un ami pour jouer avec toi :upside_down:"
+		},
+		"errorfight" : {
+			"en" : "A game is still in progress. Finish it before starting a new one.",
+			"fr" : "Une partie est d\u00e9j\u00e0 en cours. Finissez-la pour en commencer une nouvelle."
+		},
+		"errorgameover" : {
+			"en" : "\"To start a new game, use \" + prefix + \"fight command.\"",
+			"fr" : "\"Pour commencer une nouvelle partie, utilusez la commande \" + prefix + \"fight.\""
+		},
+		"errorstart" : {
+			"en" : "Game already starts! You can't choose your cell anymore.",
+			"fr" : "La partie a d\u00e9j\u00e0 commenc\u00e9e ! Vous ne pouvez plus choisir votre grande case."
+		},
+		"errorturn" : {
+			"en" : "It's not your turn!",
+			"fr" : "Ce n'est pas votre tour !"
+		},
+		"errorposition" : {
+			"en" : "Please enter a valid position!",
+			"fr" : "Entrez une position valide s'il vous pla\u00eet !"
+		},
+		"errorplace" : {
+			"en" : "You can't play in this place!",
+			"fr" : "Vous ne pouvez pas jouer dans cette case !"
+		},
+		"errorcsv" : {
+			"en" : "No csv game file found.",
+			"fr" : "Aucun fichier csv de partie trouv\u00e9."
+		},
+		"errorcorrupt" : {
+			"en" : "\"Your .csv file is corrupted!\\n\" + str(error)\"",
+			"fr" : "\"Votre fichier de partie .csv est corrompu !\\n\" + str(error)\""
+		},
+		"errorrestore" : {
+			"en" : "Someone already wins this game, you can't restore it!",
+			"fr" : "Quelqu'un a d\u00e9j\u00e0 gagn\u00e9 cette partie, vous ne pouvez pas la restaurer !"
+		},
+		"errorBOT" : {
+			"en" : "Sorry, for now you can't resume a fight against the BOT :confused:",
+			"fr" : "D\u00e9sol\u00e9, pour l'instant il est impossible de restaurer une partie contre le BOT :confused:"
+		},
+		"errorattach" : {
+			"en" : "Please attach a .csv game file.",
+			"fr" : "Merci d'ajouter un fichier de partie csv en pi\u00e8ce-jointe."
+		},
+		"errorfps" : {
+			"en" : "The argument can only be 'fast' or 'slow'",
+			"fr" : "Les seuls arguments autoris\u00e9s sont 'fast' ou 'slow'"
+		},
+		"errorlanguage" : {
+			"en" : "\"For the moment, the language '\" + str(language_prefix) + \"' is not implemented!\"",
+			"fr" : "\"Pour l'instant, la langue '\" + str(language_prefix) + \"' n'est pas impl\u00e9ment\u00e9e\""
+		}
+  	},
+  	"MESSAGES" : {
+  		"fight" : {
+		"en" : "FIGHT!",
+		"fr" : "COMBAT LANC\u00c9 !"
+		},
+		"restore" : {
+			"en" : "OLD FIGHT RESTORED!",
+			"fr" : "ANCIEN COMBAT RESTAUR\u00c9 !"
+		},
+		"fight_msg" : {
+			"en" : "\"<@\" + str(ctx.author.id) + \"> starts a fight between <@\" + str(player1.id) + \"> and <@\" + str(player2.id) + \">! :crossed_swords:\"",
+			"fr" : "\"<@\" + str(ctx.author.id) + \"> a lanc\u00e9 une partie entre <@\" + str(player1.id) + \"> et <@\" + str(player2.id) + \"> ! :crossed_swords:\""
+		},
+		"restore_msg" : {
+			"en" : "\"<@\" + str(ctx.author.id) + \"> restore an old fight between <@\" + str(player1.id) + \"> and <@\" + str(player2.id) + \">! :crossed_swords:\"",
+			"fr" : "\"<@\" + str(ctx.author.id) + \"> a relanc\u00e9 une ancienne partie entre <@\" + str(player1.id) + \"> et <@\" + str(player2.id) + \"> ! :crossed_swords:\""
+		},
+		"start_info" : {
+			"en" : "\"\\nStart the game with \" + prefix +\"start <big cell number> <little cell number> command.\\nFirst integer is the cell you want to play in, second one is the place in this cell.\"",
+			"fr" : "\"\\nCommencez la partie avec la commande \" + prefix + \"start <n\u00b0 grande case> <n\u00b0 petite case>.\\nLe premier nombre est la grande case dans laquelle vous voulez jouer, le deuxi\u00e8me indique la petite case.\""
+		},
+		"turno" : {
+			"en" : "\":o: <@\" + str(turn.id) + \">'s turn.\"",
+			"fr" : "\":o: C'est \u00e0 <@\" + str(turn.id) + \"> de jouer.\""
+		},
+		"turnx" : {
+			"en" : "\":x: <@\" + str(turn.id) + \">'s turn.\"",
+			"fr" : "\":x: C'est \u00e0 <@\" + str(turn.id) + \"> de jouer.\""
+		},
+		"cellwinx" : {
+			"en" : "\":x: <@\" + str(player1.id) + \"> won a cell!\"",
+			"fr" : "\":x: <@\" + str(player1.id) + \"> a gagn\u00e9 une case !\""
+		},
+		"cellwino" : {
+			"en" : "\":o: <@\" + str(player2.id) + \"> won a cell!\"",
+			"fr" : "\":o: <@\" + str(player2.id) + \"> a gagn\u00e9 une case !\""
+		},
+		"autoplay" : {
+			"en" : "You will play against the BOT. WARNING : he plays really bad!",
+			"fr" : "Vous allez jouer contre le BOT. ATTENTION : il joue vraiment mal !"
+		},
+		"winner" : {
+			"title" : {
+				"en" : "WINNER!",
+				"fr" : "GAGNANT !"
+			},
+			"winx" : {
+				"en" : "\"The winner is <@\" + str(player1.id) + \"> with :x:. Congratulations! :crown:\\nDownload the csv game file by using  \" + prefix + \"gamefile command\"",
+				"fr" : "\"Le gagnant est <@\" + str(player1.id) + \"> avec les :x:. F\u00e9licitations ! :crown:\\nPour t\u00e9l\u00e9charger le fichier csv de la partie, utilisez la commande \" + prefix + \"gamefile\""
+			},
+			"wino" : {
+				"en" : "\"The winner is <@\" + str(player2.id) + \"> with :o:. Congratulations! :crown:\\nDownload the csv game file by using  \" + prefix + \"gamefile command\"",
+				"fr" : "\"Le gagnant est <@\" + str(player2.id) + \"> avec les :o:. F\u00e9licitations ! :crown:\\nPour t\u00e9l\u00e9charger le fichier csv de la partie, utilisez la commande \" + prefix + \"gamefile\""
+			}
+		},
+		"tie" : {
+			"en" : "\"It's a tie! Congratulations <@\" + str(player1.id) + \"> and <@\" + str(player2.id) + \">!\"",
+			"fr" : "\"Match nul ! F\u00e9licitations <@\" + str(player1.id) + \"> et <@\" + str(player2.id) + \"> !\""
+		},
+		"force_end" : {
+			"en" : "GOODBYE!",
+			"fr" : "AU REVOIR !"
+		},
+		"download" : {
+			"en" : "\"\\nDownload the csv game file by using  \" + prefix + \"gamefile command\\nYou can add the argument 'video' to download a video file of the game.\"",
+			"fr" : "\"\\nPour t\u00e9l\u00e9charger le fichier csv de la partie, utilisez la commande \" + prefix + \"gamefile\\nVous pouvez ajouter l'argument 'video' pour t\u00e9l\u00e9charger un fichier vid\u00e9o de la partie.\""
+		},
+		"rules" : {
+			"title" : {
+				"en" : "RULES",
+				"fr" : "R\u00c8GLES"
+			},
+			"msg" : {
+				"en" : "An ultimate tic tac toe board is made up of 9 regular sized tic tac toe boards.\nEach regular sized tic tac toe board has 9 cells.\nCells and regulars sized boards are numbered from 1 to 9 :\n1 2 3\n4 5 6\n7 8 9\nI'm lazy, I don't want to write all the rules, please ask to somebody who knows them.",
+				"fr" : "\"Une grille d'Ultimate Tic Tac Toe (M\u00e9tamorpion) est faite de 9 grilles classiques de morpions.\nChaque grille classique a 9 cases.\nLes cases et les grilles classiques sont num\u00e9rot\u00e9es de 1 \u00e0 9 :\n1 2 3\n4 5 6\n7 8 9\nJ'ai la flemme de finir d'\u00e9crire les r\u00e8gles, demande \u00e0 quelqu'un qui les connait."
+			}
+		},
+		"wait" : {
+			"en" : "Please wait, BOT restore the game, it can take a long time.",
+			"fr" : "Merci d'attendre, le BOT restaure la partie, cela peut prendre un moment."
+		}
+  	},
+  	"BOARD" : {
+  		"mark_color" : "g",
+	  	"last_mark_color" : "m",
+	  	"big_mark_color" : "k",
+	  	"big_board_color" : "k",
+	  	"little_board_color" : "b",
+	  	"next_board_color" : "r"
+  	}
+}
