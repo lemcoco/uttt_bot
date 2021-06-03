@@ -295,8 +295,6 @@ async def place(ctx, pos: int, callbybot = False):
                             print('Game end by win')
                             if mark:
                                 win_msg = str( eval( config['MESSAGES']['winner']['winx'][lang] ) )
-                                win = discord.Embed(title = win_title , description = str(eval(winx)) , color = 0xf1c40f)
-                                await ctx.send(embed = win) #this msg will stay in the channel
                             else:
                                 win_msg = str( eval( config['MESSAGES']['winner']['wino'][lang] ) )
                             title = config['MESSAGES']['winner']['title'][lang]
